@@ -38,9 +38,20 @@ $(() => {
         let selectedMonth = $(".month").val()
         let days = new Date(dateObject.getFullYear(), selectedMonth, 0).getDate();
         console.log(days)
+        // let optioncheck = document.querySelector("form").elements[2];
+        // if(optioncheck.length > 10) {
+        //     console.log("boom");
+        //     for(let i=1; i<=optioncheck.length; i++) {
+        //         delete optioncheck[i]
+        //     }
+        //     console.log(optioncheck)
+        // }
+
+        
         for(let i=1; i<=days; i++) {
             let update = $("<option></option>").text(i)
             $(".day").append(update);
         };
+        
     })
 })
